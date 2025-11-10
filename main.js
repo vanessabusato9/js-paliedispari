@@ -14,7 +14,7 @@
     console.log(`L'utente ha scelto: ${puntata}`);
 
 //Scegli numero 
-    let numero = prompt("Scegli un numero tra 1 e 10 compresi");
+    let numero = parseInt (prompt("Scegli un numero tra 1 e 10 compresi"));
     console.log(`L'utente ha scelto il numero ${numero}`);
 
     if ( numero < 0 || numero > 10 || isNaN("numero")) {
@@ -23,5 +23,8 @@
         console.log(`L'utente ha scelto il numero: ${numero}`);
     }
 
+//Numero scelto dal computer 
+    let computer = Math.floor (Math.random() *4 );
+    console.log
 
 //}
