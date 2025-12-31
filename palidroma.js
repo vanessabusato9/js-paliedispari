@@ -3,4 +3,5 @@
 let input = prompt("Inserisci una parola");
 let inputReverse = "";
 
-InputReverse = input.split("").reverse().join("");
+inputReverse = input.split("").reverse().join("");
+console.log(inputReverse);
