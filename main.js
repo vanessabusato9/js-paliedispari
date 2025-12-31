@@ -1,30 +1,48 @@
 //Esercizio Pari_dispari 
 //L'utente sceglie se puntare su un esito pari o dispari
+let puntata = prompt("Scegli se puntare su pari o su dispari");
+console.log(`L'utente ha scelto di puntare su: ${puntata}`);
 
-//Dichiarazione di funzione
-//Scegli funzione
-//function scegliPuntata() {
-    let puntata = prompt("Scegli se puntare su pari o su dispari");
-    console.log(`L'utente ha scelto di puntare su: ${puntata}`);
-
-    if ( puntata != "pari" && puntata != "dispari") {
+if (puntata != "pari" && puntata != "dispari") {
     alert("Errore: dovevi scegliere tra pari e dispari. Ho scelto per te dispari");
-    puntata = "dispari"; 
-    }
-    console.log(`L'utente ha scelto: ${puntata}`);
+    puntata = "dispari";
+}
+console.log(`L'utente ha scelto: ${puntata}`);
 
-//Scegli numero 
-    let numero = parseInt (prompt("Scegli un numero tra 1 e 10 compresi"));
-    console.log(`L'utente ha scelto il numero ${numero}`);
+//L'utente sceglie il numero 
+let numero = parseInt(prompt("Scegli un numero tra 1 e 10 compresi"));
+console.log(`L'utente ha scelto il numero ${numero}`);
 
-    if ( numero < 0 || numero > 10 || isNaN("numero")) {
-        alert("Errore: dovevi scegliere tra 1 e 10. Ho scelto io per te 5");
-        numero = 5;
-        console.log(`L'utente ha scelto il numero: ${numero}`);
-    }
+if (numero < 0 && numero > 10 && isNaN("numero")) {
+    alert("Errore: dovevi scegliere tra 1 e 10. Ho scelto io per te 5");
+    numero = 5;
+}
+console.log(`L'utente ha scelto il numero: ${numero}`);
 
 //Numero scelto dal computer 
-    let computer = Math.floor (Math.random() *4 );
-    console.log
+const computer = Math.floor(Math.random() * 10) + 1;
+console.log(computer);
 
-//}
+//Somma numero scelto dall'utente e nr scelto dal pc
+const somma = numero + computer;
+console.log(somma);
+
+//Risultato 
+let risultato;
+
+if (somma % 2 === 0) {
+    risultato = "pari";
+} else {
+    risultato = "dispari";
+}
+
+console.log(risultato);
+
+//Vincitore 
+if (puntata = risultato) {
+    console.log("Hai vinto");
+} else {
+    console.log("Hai perso");
+}
+
+
